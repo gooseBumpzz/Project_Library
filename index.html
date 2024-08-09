@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book title</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Track Your Book Library</h1>
+    <h3>Add new books, remove old books, change status as you go through them</h3>
+
+    <dialog id="dialogWindow">
+        <button id="closeBth" class="dialBtn" autofocus>Close</button>
+
+        <form id="bookForm">
+            <p></p>
+            <fieldset>
+              <legend>Add New Book</legend>
+      
+              <div>
+                <label for="title">Title: </label>
+                <input id="title" name="title" type="text" required="">
+                <span></span>
+              </div>
+              <div>
+                <label for="author">Author: </label>
+                <input id="author" name="author" type="text" required="">
+                <span></span>
+              </div>
+              <div>
+                  <label for="pages">Pages: </label>
+                  <input id="pages" name="pages" type="number" min="1" max="" required="">
+                  <span></span>
+                </div>
+
+                <!-- remove it and substitute for radio batton -->
+              <!-- <div>
+                <label for="read">Status: </label>
+                <input id="read" name="read" type="text" required="">
+                <span></span>
+              </div> -->
+
+              <div id="wrapper">
+                <div><p style="font-size: 20px;">Have you read the book?</p></div>
+                <div>
+                    <label for="positive">Yes</label>
+                    <input type="radio" id="positive" name="status" value="Yes">
+                     
+                </div>
+                 <div>
+                    <label for="negative">No</label>
+                    <input type="radio" id="negative" name="status" value="No" >
+                    
+                 </div>
+                 
+              </div>
+              <div><button id="submitButton" class="dialBtn" >Submit</button></div>
+            </fieldset>
+          </form>
+      </dialog>
+    <button id="dialogBtn">+ Book</button>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+
+</body>
+</html>
